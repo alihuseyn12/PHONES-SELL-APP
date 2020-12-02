@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<style>
+    .asd{
+position: absolute;
+        top: 50px;
+
+}
+
+    .basket_itm {
+        position: absolute;
+        top: 50px;
+        right: 30px;
+        font-size: 30px;
+
+
+    }
+
+    p {
+        text-align: center;
+        font-size: medium;
+
+    }
+
+    img {
+        width: 220px;
+        height: 210px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="row" id="product_itms"></div>
+    </div>
+    <div class="basket_itm">
+        <i class="fa fa-shopping-basket"></i>
+        <a href="#" id="basket_id">0</a>
+    </div>
+    <script src="js/product.js"></script>
+    <script src="js/productMenger.js"></script>
+    <script>
+
+        productMenger.load(products);
+        let getPaginatabelProducts = productMenger.getPaginatabelProduct(1);
+        renderOnPage.render(getPaginatabelProducts, "product_itms");
+
+
+    </script>
+</body>
+
+</html>
